@@ -1,0 +1,199 @@
+/* Очищення базових стилів браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Висота на всю висоту вікна */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+i {
+    margin-right: 8px; /* Відступ для іконок перед текстом */
+}
+
+/* Заголовок (header) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 2px 0 0 2px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #e5e5e5;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ddd;
+}
+
+.user-menu img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Контейнер */
+.container {
+    display: flex; /* Зробимо контейнер гнучким */
+    flex-grow: 1; /* Дозволяємо контейнеру займати залишок простору */
+}
+
+/* Сайдбар (бічне меню) */
+.sidebar {
+    min-width: 250px;
+    background-color: #fff;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+    position: sticky;
+    top: 70px; /* Залишаємо місце для заголовка */
+    height: calc(100vh - 70px); /* Висота на всю висоту вікна */
+    overflow-y: auto; /* Додаємо прокрутку, якщо потрібно */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Контент (сітка відео) */
+.content {
+    flex-grow: 1; /* Дозволяємо контенту займати залишок простору */
+    padding: 20px;
+    overflow: auto; /* Додаємо прокрутку, якщо контент перевищує висоту */
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video {
+    width: calc(33.333% - 20px);
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+}
+
+.video img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.video p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.video:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивність (мобільні пристрої) */
+@media (max-width: 1200px) {
+    .video {
+        width: calc(50% - 20px);
+    }
+
+    .search-bar input {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video {
+        width: calc(100% - 20px);
+    }
+
+    .search-bar input {
+        width: 200px;
+    }
+
+    .sidebar {
+        display: none; /* Сховуємо сайдбар на малих екранах */
+    }
+
+    .container {
+        flex-direction: column; /* Змінюємо напрямок контейнера */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+    }
+}
+.channel-logo {
+    width: 40px; /* Ширина зображення каналу */
+    height: 40px; /* Висота зображення каналу */
+    border-radius: 50%; /* Кругла форма */
+    margin-top: 10px; /* Відступ зверху */
+    display: block; /* Відображати як блочний елемент */
+    margin-right: auto; /* Центруємо зображення */
+}

@@ -1,0 +1,114 @@
+/* Загальні стилі */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.keyboard-container {
+    display: flex;
+    gap: 20px; /* Проміжок між основною клавіатурою та нампадом */
+    padding: 20px;
+    background-color: DarkGray;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.keyboard, .numpad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 4px; /* Зменшення проміжків між стрілками */
+}
+
+.key-row, .numpad, .arrows {
+    display: flex;
+    gap: 4px; /* Зменшення проміжків між клавішами */
+}
+
+/* Стиль клавіш */
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    min-width: 45px;
+    background-color: Linen;
+    border-radius: 4px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.key:hover {
+    background-color: MistyRose;
+}
+
+.key:active {
+    background-color: Blue;
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+/* Розміри спеціальних клавіш */
+.key-backspace {
+    min-width: 90px;
+}
+
+.key-tab {
+    min-width: 70px;
+}
+
+.key-caps {
+    min-width: 80px;
+}
+
+.key-enter {
+    min-width: 80px;
+}
+
+.key-shift {
+    min-width: 90px;
+}
+
+.key-ctrl, .key-alt {
+    min-width: 60px;
+}
+
+.key-space {
+    min-width: 300px;
+}
+
+/* Стиль для числової панелі */
+.numpad .key {
+    min-width: 50px;
+    height: 50px;
+    background-color: LightSlateGray;
+    border-radius: 4px;
+}
+
+.key-wide {
+    grid-column: span 2; /* Клавіша "0" */
+}
+
+.key-tall {
+    grid-row: span 2; /* Клавіша Enter на нампаді */
+}
+
+/* Приховування порожніх елементів на верхньому ряді стрілок */
+.arrows .key-row:first-child .key:first-child,
+.arrows .key-row:first-child .key:last-child {
+    visibility: hidden; /* Приховування першого та останнього елементів на верхньому ряді */
+}

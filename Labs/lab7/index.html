@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>З НОВИМ РОКОМ!</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <h1>З Новим Роком!</h1>
+    <p>Нехай 2024 рік принесе багато радості, здоров'я, щастя та нових досягнень!</p>
+
+    <!-- Зображення в центрі -->
+    <div class="image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4aCGgQpKGKwrMiNIyDB_Sr-hF4pfZ8r9fjg&s" alt="Новорічне зображення">
+    </div>
+
+    <p>Щиро вітаємо Вас із святами!</p>
+
+    <!-- Унікальна "зірка бажань" -->
+    <div class="wish-star" onclick="makeAWish()">⭐</div>
+    <p class="wish" id="wish">Натисніть на зірку, щоб отримати побажання!</p>
+
+    <!-- Анімація снігу -->
+    <div id="snowflakes"></div>
+
+    <footer>З найкращими побажаннями, Ваша новорічна листівка.</footer>
+
+    <script>
+        // Генеруємо сніжинки
+        const snowflakesContainer = document.getElementById('snowflakes');
+        for (let i = 0; i < 50; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.textContent = '❄';
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.fontSize = Math.random() * 1.5 + 0.5 + 'em';
+            snowflakesContainer.appendChild(snowflake);
+        }
+
+        // Побажання для "зірки бажань"
+        const wishes = [
+            "Щастя і здоров'я в Новому році!",
+            "Хай здійсняться всі ваші мрії!",
+            "Миру, тепла та радості вашій родині!",
+            "Нових досягнень і натхнення!",
+            "Щасливих моментів кожного дня!",
+            "Радості, успіху та любові!",
+        ];
+
+        function makeAWish() {
+            const wishElement = document.getElementById('wish');
+            const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+            wishElement.textContent = randomWish;
+        }
+    </script>
+</body>
+</html>

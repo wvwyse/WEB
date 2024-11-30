@@ -1,0 +1,45 @@
+body{
+margin:0;
+padding:0;
+background: #f4f4f4;
+font-family: Arial,Helvetica,sans-self;
+}
+
+header{
+background-color: LightSalmon;
+color: white;
+padding: 1rem;
+text-align: center;
+}
+
+nav ul{
+list-style: none;
+margin:0;
+padding:0;
+background-color: DarkMagenta;
+overflow: hidden;
+}
+
+nav ul li a{
+text-decoration: none;
+color: Aqua;
+display: block;
+text-align: center;
+padding: 14px 16px;
+}
+
+nav ul li a:hover{
+background: red;
+}
+
+.horizontal-list {
+    list-style-type: none; /* Вимкнути стандартні маркери списку */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Використати flexbox для розташування елементів в рядок */
+    gap: 10px; /* Відстань між елементами */
+}
+
+.horizontal-list li {
+    display: inline; /* Додатково забезпечує розташування в рядок */
+}

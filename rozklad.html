@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <nav>
+            <ul class="horizontal-list">
+                <li><a href="index.html">Назад</a></li>
+            </ul>
+        </nav>
+    <link rel="stylesheet" href="style.css"> <!-- Підключення CSS -->
+    <title>Розклад занять</title>
+    <style>
+        /* Стилі для таблиці */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Додатковий стиль для ЛЕКЦІЙНИХ занять */
+        .LK {
+            background-color: PapayaWhip;
+        }
+        /* Додатковий стиль для ПРАКТИЧНИХ занять */
+        .PZ {
+            background-color: SpringGreen;
+        }
+        /* Додатковий стиль для ЛАБОРАТОРНИХ занять */
+        .LB {
+            background-color: SkyBlue;
+        }
+        /* Додатковий стиль для СЕМІНАР */
+        .SEM {
+            background-color: Plum;
+        }
+        /* Додатковий стиль для ДНЯ */
+        .day {
+            background-color: CadetBlue;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="day">Понеділок</th>
+                <th class="day">16.09.2024</th>
+                <th class="day">23.09.2024</th>
+                <th class="day">30.09.2024</th>
+                <th class="day">07.10.2024</th>
+                <th class="day">14.10.2024</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1 пара<br>08:00<br>09:35</td>
+                <td>-</td>
+                <td class="LK">ВМ[ЛК]<br>ауд.Дистанц.<br>Білоусова С.В.</td>
+                <td class="LK">ВМ[ЛК]<br>ауд.Дистанц.<br>Білоусова С.В.</td>
+                <td class="LK">ВМ[ЛК]<br>ауд.Дистанц.<br>Білоусова С.В.</td>
+                <td class="LK">ВМ[ЛК]<br>ауд.Дистанц.<br>Білоусова С.В.</td>
+            </tr>
+            <tr>
+                <td>2 пара<br>09:45<br>11:20</td>
+                <td>-</td>
+                <td class="LK">ПППІ[ЛК]<br>ауд.Дистанц.<br>Сватко В.В.</td>
+                <td class="LK">ДО[ЛК]<br>ауд.Дистанц.<br>Бажан Т.О.</td>
+                <td class="LK">ПППІ[ЛК]<br>ауд.Дистанц.<br>Сватко В.В.</td>
+                <td class="LK">ДО[ЛК]<br>ауд.Дистанц.<br>Бажан Т.О.</td>
+            </tr>
+            <tr>
+                <td>3 пара<br>11:45<br>13:20</td>
+                <td>-</td>
+                <td class="LK">WEB-технології[ЛК]<br>ауд.Дистанц.<br>Джюба В.В.</td>
+                <td class="LK">ООП[ЛК]<br>ауд.Дистанц.<br>Вишнівський О.В.</td>
+                <td class="LK">WEB-технології[ЛК]<br>ауд.Дистанц.<br>Джюба В.В.</td>
+                <td class="LK">ООП[ЛК]<br>ауд.Дистанц.<br>Вишнівський О.В.</td>
+            </tr>
+            <tr>
+                <td>4 пара<br>13:30<br>15:05</td>
+                <td>-</td>
+                <td class="">-</td>
+                <td class="LK">ФЛ[ЛК]<br>ауд.Дистанц.<br>Власенко В.О.</td>
+                <td class="">-</td>
+                <td class="LK">ФЛ[ЛК]<br>ауд.Дистанц.<br>Власенко В.О.</td>
+            </tr>
+            </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th class="day">Вівторок</th>
+                <th class="day">17.09.2024</th>
+                <th class="day">24.09.2024</th>
+                <th class="day">01.10.2024</th>
+                <th class="day">08.10.2024</th>
+                <th class="day">15.10.2024</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1 пара<br>08:00<br>09:35</td>
+                <td class="PZ">WEB-технології[ПЗ]<br>ауд.207<br>Дзюба В.В.</td>
+                <td class="SEM">ФЛ[СЕМ]<br>ауд.507<br>Власенко В.О.</td>
+                <td class="PZ">WEB-технології[ПЗ]<br>ауд.207<br>Дзюба В.В.</td>
+                <td class="SEM">ФЛ[СЕМ]<br>ауд.507<br>Власенко В.О.</td>
+                <td class="PZ">WEB-технології[ПЗ]<br>ауд.207<br>Дзюба В.В.</td>
+            </tr>
+            <tr>
+                <td>2 пара<br>09:45<br>11:20</td>
+                <td class="PZ">ООП[ПЗ]<br>ауд.207<br>Вишнівський О.В.</td>
+                <td class="LB">WEB-технології[ЛБ]<br>ауд.326<br>Дзюба В.В.</td>
+                <td class="PZ">ООП[ПЗ]<br>ауд.207<br>Вишнівський О.В.</td>
+                <td class="LB">WEB-технології[ЛБ]<br>ауд.326<br>Дзюба В.В.</td>
+                <td class="PZ">ООП[ПЗ]<br>ауд.207<br>Вишнівський О.В.</td>
+            </tr>
+            <tr>
+                <td>3 пара<br>11:45<br>13:20</td>
+                <td class="PZ">ДО[ПЗ]<br>ауд.216<br>Бажан Т.О.</td>
+                <td class="LB">ООП[ЛБ]<br>ауд.207<br>Вишнівський О.В.</td>
+                <td class="PZ">ДО[ПЗ]<br>ауд.216<br>Бажан Т.О.</td>
+                <td class="LB">ООП[ЛБ]<br>ауд.207<br>Вишнівський О.В.</td>
+                <td class="PZ">ДО[ПЗ]<br>ауд.216<br>Бажан Т.О.</td>
+            </tr>
+            <tr>
+                <td>4 пара<br>13:30<br>15:05</td>
+                <td >-</td>
+                <td class="LB">ДО[ЛБ]<br>ауд.211<br>Бажан Т.О.</td>
+                <td >-</td>
+                <td class="LB">ДО[ЛБ]<br>ауд.211<br>Бажан Т.О.</td>
+                <td >-</td>
+            </tr>
+            </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="day">Середа</th>
+                <th class="day">18.09.2024</th>
+                <th class="day">25.09.2024</th>
+                <th class="day">02.10.2024</th>
+                <th class="day">09.10.2024</th>
+                <th class="day">16.10.2024</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>4 пара<br>13:30<br>15:05</td>
+                <td class="PZ">ВМ[ПЗ]<br>ауд.501<br>Білоусова С.В.</td>
+                <td >-</td>
+                <td class="PZ">ВМ[ПЗ]<br>ауд.501<br>Білоусова С.В.</td>
+                <td >-</td>
+                <td class="PZ">ВМ[ПЗ]<br>ауд.501<br>Білоусова С.В.</td>
+            </tr>
+            <tr>
+                <td>5 пара<br>15:15<br>16:50</td>
+                <td class="PZ">ВМ[ПЗ]<br>ауд.501<br>Білоусова С.В.</td>
+                <td >-</td>
+                <td class="PZ">ВМ[ПЗ]<br>ауд.501<br>Білоусова С.В.</td>
+                <td >-</td>
+                <td class="PZ">ВМ[ПЗ]<br>ауд.501<br>Білоусова С.В.</td>
+            </tr>
+            <tr>
+                <td>6 пара<br>17:00<br>18:35</td>
+                <td class="PZ">ФЗ[ПЗ]<br>ауд.Стадіон<br>Безуглий Ю.Б.</td>
+                <td >-</td>
+                <td class="PZ">ФЗ[ПЗ]<br>ауд.Стадіон<br>Безуглий Ю.Б.</td>
+                <td >-</td>
+                <td class="PZ">ФЗ[ПЗ]<br>ауд.Стадіон<br>Безуглий Ю.Б.</td>
+            </tr>
+            </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="day">Четвер</th>
+                <th class="day">19.09.2024</th>
+                <th class="day">26.09.2024</th>
+                <th class="day">03.10.2024</th>
+                <th class="day">10.10.2024</th>
+                <th class="day">17.10.2024</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1 пара<br>08:00<br>09:35</td>
+                <td >-</td>
+                <td >-</td>
+                <td >-</td>
+                <td >-</td>
+                <td >-</td>
+            </tr>
+            </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="day">П'ятниця</th>
+                <th class="day">20.09.2024</th>
+                <th class="day">27.09.2024</th>
+                <th class="day">04.10.2024</th>
+                <th class="day">11.10.2024</th>
+                <th class="day">18.10.2024</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1 пара<br>08:00<br>09:35</td>
+                <td class="PZ">ПППІ[ПЗ]<br>ауд.207<br>Сватко В.В.</td>
+                <td class="PZ">ПППІ[ПЗ]<br>ауд.207<br>Сватко В.В.</td>
+                <td class="PZ">ПППІ[ПЗ]<br>ауд.207<br>Сватко В.В.</td>
+                <td class="PZ">ПППІ[ПЗ]<br>ауд.207<br>Сватко В.В.</td>
+                <td class="PZ">ПППІ[ПЗ]<br>ауд.207<br>Сватко В.В.</td>
+            </tr>
+            <tr>
+                <td>2 пара<br>09:45<br>11:20</td>
+                <td class="PZ">УМ[ПЗ]<br>ауд.129<br>Стежко С.О.</td>
+                <td class="LB">ВМ[ЛБ]<br>ауд.517<br>Олімпієва Ю.І.</td>
+                <td class="PZ">УМ[ПЗ]<br>ауд.129<br>Стежко С.О.</td>
+                <td class="LB">ВМ[ЛБ]<br>ауд.517<br>Олімпієва Ю.І.</td>
+                <td class="PZ">УМ[ПЗ]<br>ауд.129<br>Стежко С.О.</td>
+            </tr>
+            </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="day">Субота</th>
+                <th class="day">21.09.2024</th>
+                <th class="day">28.09.2024</th>
+                <th class="day">05.10.2024</th>
+                <th class="day">12.10.2024</th>
+                <th class="day">19.10.2024</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1 пара<br>08:00<br>09:35</td>
+                <td >-</td>
+                <td class="LK">УМ[ЛК]<br>ауд.Дистанц.<br>Стежко С.О.</td>
+                <td >-</td>
+                <td class="LK">УМ[ЛК]<br>ауд.Дистанц.<br>Стежко С.О.</td>
+                <td >-</td>
+            </tr>
+            </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Форма реєстрації</title>
+
+</head>
+<body>
+    <div class="registration-form">
+        <h1>Форма для реєстрації</h1>
+        <form action="https://webhook.site">
+            <label for="inputName">Ваше ім'я <sup>*</sup></label>
+            <input type="text" name="inputName" required>
+
+            <label for="inputSurname">Прізвище <sup>*</sup></label>
+            <input type="text" name="inputSurname" required>
+
+            <label for="inputEmail">Ваша електронна адреса <sup>*</sup></label>
+            <input type="email" name="inputEmail" 
+                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+
+            <label for="inputPassword">Ваш Пароль <sup>*</sup></label>
+            <input type="password" name="inputPassword" required>
+
+            <label for="inputPass">Підтвердіть ваш пароль <sup>*</sup></label>
+            <input type="password" name="inputPass" required>
+
+            <label for="inputDay">Ваш рік народження </label>
+            <input type="date" name="inputDay">
+
+            <button type="submit">Подати</button>
+        </form>
+    </div>
+</body>
+</html>

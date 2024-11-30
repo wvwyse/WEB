@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<link rel = "stylesheet" href = "style.css">
+
+</head>
+<body>
+<div class = "registration-form">
+<h1>Форма для регестрації</h1>
+<form action ="https://webhook.site">
+<label for = "inputName">Ваше ім'я <sup style = "color: red;">*</sup></label><br>
+<input type = "text" name = "inputName" required><br>
+
+<label for = "inputSurname">Призвіще <sup style = "color: red;">*</sup></label><br>
+<input type = "text" name = "inputSurname" required><br>
+
+<label for = "inputEmeil">Ваша електронна адреса <sup style = "color: red;">*</sup></label><br>
+<input type = "email" name = "inputEmeil" 
+pattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required><br>
+
+<label for = "inputPassword">Ваш Пароль <sup style = "color: red;">*</sup></label><br>
+<input type = "text" name = "inputPassword" required><br>
+
+<label for = "inputPass">Підтвердіть ваш пароль <sup style = "color: red;">*</sup></label><br>
+<input type = "text" name = "inputPass" required><br>
+
+<label for = "inputDay">Ваш рік народження </label><br>
+<input type = "date" name = "inputDay"><br>
+
+<button  type ="submit">Подати</button>
+
+</form>
+</div>
+<body>
+</html>
