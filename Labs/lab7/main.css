@@ -1,0 +1,76 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffd700;
+}
+
+/* Контейнер з побажаннями */
+.greeting {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.photo-container {
+  margin-bottom: 20px;
+}
+
+.photo-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 8px solid #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+.fireworks-button {
+  background-color: #d62828;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.fireworks-button:hover {
+  background-color: #e63946;
+  transform: scale(1.1);
+}
+
+.fireworks-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-image: url("https://t4.ftcdn.net/jpg/05/46/90/73/240_F_546907334_bQwpRH7oT1gK3STYn3hreuZlJA8wao4v.jpg"); /* Заміни URL на реальний шлях до новорічного фону */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+}/*# sourceMappingURL=main.css.map */

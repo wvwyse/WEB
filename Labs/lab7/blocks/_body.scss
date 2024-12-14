@@ -1,0 +1,15 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('https://t4.ftcdn.net/jpg/05/46/90/73/240_F_546907334_bQwpRH7oT1gK3STYn3hreuZlJA8wao4v.jpg'); /* Заміни URL на реальний шлях до новорічного фону */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}

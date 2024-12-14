@@ -1,58 +1,88 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>З НОВИМ РОКОМ!</title>
-  <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="main.css">
+    <title>New Year Celebration</title>
 </head>
 <body>
-    <h1>З Новим Роком!</h1>
-    <p>Нехай 2024 рік принесе багато радості, здоров'я, щастя та нових досягнень!</p>
-
-    <!-- Зображення в центрі -->
-    <div class="image-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4aCGgQpKGKwrMiNIyDB_Sr-hF4pfZ8r9fjg&s" alt="Новорічне зображення">
+    <h1>🎄 З Новим роком! 🎄</h1>
+    
+    <div class="photo-container">
+        <img src="https://i.gifer.com/3zt8.gif" alt="Your Photo"> <!-- Заміни URL на реальний шлях до фотографії -->
     </div>
-
-    <p>Щиро вітаємо Вас із святами!</p>
-
-    <!-- Унікальна "зірка бажань" -->
-    <div class="wish-star" onclick="makeAWish()">⭐</div>
-    <p class="wish" id="wish">Натисніть на зірку, щоб отримати побажання!</p>
-
-    <!-- Анімація снігу -->
-    <div id="snowflakes"></div>
-
-    <footer>З найкращими побажаннями, Ваша новорічна листівка.</footer>
-
+    
+    <button class="fireworks-button" onclick="startFireworks()">🎉 Запустити феєрверки 🎉</button>
+    
+    <canvas id="fireworksCanvas" class="fireworks-container"></canvas>
+    
     <script>
-        // Генеруємо сніжинки
-        const snowflakesContainer = document.getElementById('snowflakes');
-        for (let i = 0; i < 50; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.textContent = '❄';
-            snowflake.classList.add('snowflake');
-            snowflake.style.left = Math.random() * 100 + 'vw';
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-            snowflake.style.fontSize = Math.random() * 1.5 + 0.5 + 'em';
-            snowflakesContainer.appendChild(snowflake);
+        const canvas = document.getElementById('fireworksCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
+        let particles = [];
+        
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.size = Math.random() * 5 + 1;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 3 - 1.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.size > 0.2) this.size -= 0.1;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
         }
-
-        // Побажання для "зірки бажань"
-        const wishes = [
-            "Щастя і здоров'я в Новому році!",
-            "Хай здійсняться всі ваші мрії!",
-            "Миру, тепла та радості вашій родині!",
-            "Нових досягнень і натхнення!",
-            "Щасливих моментів кожного дня!",
-            "Радості, успіху та любові!",
-        ];
-
-        function makeAWish() {
-            const wishElement = document.getElementById('wish');
-            const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
-            wishElement.textContent = randomWish;
+        
+        function handleParticles() {
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                if (particles[i].size <= 0.2) {
+                    particles.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+        
+        function createFirework(x, y) {
+            const colors = ['#ff6666', '#ffcc66', '#66ff66', '#66ccff', '#cc66ff'];
+            for (let i = 0; i < 50; i++) {
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                particles.push(new Particle(x, y, color));
+            }
+        }
+        
+        function startFireworks() {
+            canvas.addEventListener('click', (event) => {
+                createFirework(event.clientX, event.clientY);
+            });
+            createFirework(canvas.width / 2, canvas.height / 2);
+            animate();
+        }
+        
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            handleParticles();
+            requestAnimationFrame(animate);
         }
     </script>
 </body>
